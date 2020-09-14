@@ -1,0 +1,31 @@
+import combates.*
+import personajes.*
+describe "combatesDeEquipos"{
+	fixture {
+		combates.peleaDeEquipos()
+	}
+	test "toroDespuesDePelea" {
+	assert.equals(2,toro.getElementos().size())
+	}
+	test "gritoDelEquipoGanador"{
+		assert.that(combates.gritoDeEquipoGanador()==["No se metan con el toro","Hora de cuidar a las plantas"])
+	}
+	test "energiaPamelaDespuesDeCombate"{
+		assert.equals(3100,pamela.getEnergia())
+	}
+	test "energiaPocardoDespuesDeCombate"{
+		assert.equals(3100,pocardo.getEnergia())
+	}
+	test "cantidadDeElementosPamelaDespuesDeCombate"{
+		assert.equals(3,pamela.getElementos().size())
+	}
+	test "cantidadDeElementosPocardoDespuesDeCombate"{
+		assert.equals(2,pocardo.getElementos().size())
+	}
+	test "energiaTorodoDespuesDeCombate"{
+		assert.equals(7800,toro.getEnergia())
+	}
+	test "energiaTulipanDespuesDeCombate"{
+		assert.equals(8400,tulipan.getEnergia())
+	}
+}
